@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class StackTest {
+public class MyStackTest {
 
     MyStack s;
     
