@@ -78,11 +78,13 @@ public class MyStackTest {
 	
 	@Test (expected = NoSuchElementException.class)
 	public void poppingFromEmptyStackThrowsException() {
+		/* this will fail... naturally */
 		s.pop();
 	}
 	
 	@Test (expected = NoSuchElementException.class)
 	public void peekingIntoEmptyStackThrowsException() {
+		/* this will fail... naturally */
 		s.peek();
 	}
 	
