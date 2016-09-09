@@ -30,22 +30,23 @@ public class MyStackTest {
 		;
 	}
 
-	@Test /* testing boundary value */
-	public void after1PushesStackIsNonEmptyAndSizeIs1() {
+	@Test /* testing boundary behavior */
+	public void after1PushStackIsNonEmptyAndSizeIs1() {
 		s.push(1);
 		assertFalse(s.isEmpty());
 		assertThat(s.size(), is(equalTo(1)));
 	}
 	
-	@Test /* testing nominal value */
-	public void after3PushesStackIsNonEmptyAndSizeIs3() {
-		s.push(1);
-		s.push(2);
-		s.push(3);
+	@Test /* testing nominal behavior */
+	public void afterNPushesStackSizeIsN() throws OverflowException {
+		int n = 3;
+		for (int i = 1; i <= n; i++) {
+			s.push(i*100);
+		}
 		assertFalse(s.isEmpty());
-		assertThat(s.size(), is(equalTo(3)));
+		assertThat(s.size(), is(equalTo(n)));
 	}
-	
+		
 	@Test
 	public void popAfterPushReturnsPushedValueAndRestoresStackSize() {
 		int pushValue = 200;
