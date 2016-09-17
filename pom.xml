@@ -19,6 +19,13 @@
 		</plugins>
 	</build>
 	<dependencies>
+		<!-- If certain dependencies are not resolved, try deleting 
+	     the offending jars in maven repo
+	     and let maven download them again. 
+	     In Eclipse, navigate to .m2 folder and remove the jar directory. 
+	     Then do Maven -> Update Project. 
+	     This may happen with latest version of junit.
+	     -->
 		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest-library</artifactId>
